@@ -57,6 +57,13 @@ app.get('/bad', (req, res) => {
   } )
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+  pageTitle: 'Projects',
+  message: 'Portfolio Links:'
+  });
+});
+
 app.listen(process.env.PORT || 7777, () => {
   console.log('Express server started');
 });
